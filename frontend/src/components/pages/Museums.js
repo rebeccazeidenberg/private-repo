@@ -13,15 +13,15 @@ const Museums = () => {
 			<div className="d-flex justify-content-between w-100">
 				<div className="d-inline-block">
 					<Link to="/map">
-						<img src={IconMap} className="ml-4 mt-4 shadow-sm img-fluid" alt="Icon One" width={70} heigt={70} />
+						<img src={IconMap} className="ml-4 mt-4 shadow-sm img-fluid" alt="Icon One" width={50} heigt={50} />
 					</Link>
 					<Link to="/museums">
-						<img src={IconGalleries} className="mt-4 shadow-sm img-fluid" alt="Icon Two" width={70} heigt={70} />
+						<img src={IconGalleries} className="mt-4 shadow-sm img-fluid" alt="Icon Two" width={50} heigt={50} />
 					</Link>
 				</div>
 				<div className="d-inline-block">
 					<Link to="/options">
-						<img src={IconHamburger} className="mr-4 mt-4 shadow-sm img-fluid" alt="Hamburger" width={70} heigt={70} />
+						<img src={IconHamburger} className="mr-4 mt-4 shadow-sm img-fluid" alt="Hamburger" width={50} heigt={50} />
 					</Link>
 				</div>
 			</div>
@@ -29,13 +29,13 @@ const Museums = () => {
             <Form>
 				<Form.Group className="mb-3 d-flex align-items-end justify-content-between w-100" controlId="formBasicSearch">
 					<Form.Control className="ml-4 mr-4 search border-dark border-top-0 border-right-0 border-left-0" type="search" />
-					<img src={IconSearch} className="mr-4 shadow-sm img-fluid" alt="Icon Three" width={70} heigt={70} />
+					<img src={IconSearch} className="mr-4 shadow-sm img-fluid" alt="Icon Three" width={50} heigt={50} />
 				</Form.Group>
 			</Form>
 			<div className="">
 				<Link to="/arvr">
 					<div className="m-4 shadow">
-						<img src={Gallery3rdilab} className="img-fluid" alt="3rdilab Gallery" width={500} heigt={100} />
+						<img src={Gallery3rdilab} className="img-fluid" alt="3rdilab Gallery" width={400} heigt={70} />
 					</div>
 				</Link>
 			</div>

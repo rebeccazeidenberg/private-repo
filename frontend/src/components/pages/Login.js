@@ -26,7 +26,9 @@ const Login = () => {
                 </Button>
             </div>
             <div className="text-center">
-                <a href="">Register</a>
+                {/* <a href="">Register</a> */}
+                <Link to="/museums">Register</Link>
+                
             </div>
             </Form>
         </div>
