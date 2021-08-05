@@ -1,64 +1,92 @@
-import React from 'react';
-import 'aframe';
-import {Box, Sphere, Cylinder, Plane, Sky, Text, Scene} from 'react-aframe-ar';
+import "aframe";
+import "arjs"
+import React, { Component } from "react";
 
-const AR = () => {
-    return(
-        <div>
-            <div class="arjs-loader">
-                <div>Loading, please wait...</div>
-            </div>
-            <a-scene
-                vr-mode-ui="enabled: false;"
-                renderer="logarithmicDepthBuffer: true;"
-                embedded
-                arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-            >
-                <a-nft
-                    type="nft"
-                    url="https://rebeccazeidenberg.github.io/private-repo/starrynight"
-                    smooth="true"
-                    smoothCount="10"
-                    smoothTolerance=".01"
-                    smoothThreshold="5"
-                >
-                    <a-entity>
-                    <div class="sketchfab-embed-wrapper"> 
-                        <iframe title="Vincent Van Gogh - Painterly Character Bust" 
-                        frameborder="0" 
-                        allowfullscreen mozallowfullscreen="true" 
-                        webkitallowfullscreen="true" 
-                        allow="fullscreen; autoplay; vr" 
-                        xr-spatial-tracking 
-                        execution-while-out-of-viewport 
-                        execution-while-not-rendered 
-                        web-share src="https://sketchfab.com/models/f8fe0ee97088403ba4c808141f27c706/embed"> 
-                        </iframe> 
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> 
-                                <a href="https://sketchfab.com/3d-models/vincent-van-gogh-painterly-character-bust-f8fe0ee97088403ba4c808141f27c706?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706" 
-                                target="_blank" 
-                                style="font-weight: bold; color: #1CAAD9;"> 
-                                Vincent Van Gogh - Painterly Character Bust 
-                                </a> by 
-                                <a href="https://sketchfab.com/chocofries?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706" 
-                                target="_blank" 
-                                style="font-weight: bold; color: #1CAAD9;"> 
-                                ChocoFries </a> on 
-                                <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706" 
-                                target="_blank" 
-                                style="font-weight: bold; color: #1CAAD9;">
-                                Sketchfab</a>
-                            </p>
-                        </div>
-                    </a-entity>
-                </a-nft>
-
-
-
-                <a-entity camera></a-entity>
-            </a-scene>
-        </div>
-    )
+class AR extends Component {
+  render() {
+    return (
+      <a-scene >
+        <a-entity 
+          geometry="primitive: box" 
+          position="-1 0.5 -3" 
+          rotation="0 45 0" 
+          material="color: #4CC3D9" />
+        <a-entity 
+          geometry="primitive: sphere; radius: 1.25;" 
+          position="0 1.25 -5" 
+          material="color: #EF2D5E" />
+        <a-entity 
+          geometry="primitive: cylinder; radius: 0.5, height: 1.5" 
+          position="1 0.75 -3" 
+          material="color: #FFC65D" />
+        <a-entity 
+          geometry="primitive: plane; width: 4; height: 4" 
+          position="0 0 -4" 
+          rotation="-90 0 0" 
+          material="color: #7BC8A4" />
+      </a-scene>
+    );
+  }
 }
+
+// import React from 'react';
+// import 'aframe';
+
+// const AR = () => {
+//     return(
+//         <div>
+//             <div class="arjs-loader">
+//                 <div>Loading, please wait...</div>
+//             </div>
+//             <a-scene
+//                 vr-mode-ui="enabled: false;"
+//                 renderer="logarithmicDepthBuffer: true;"
+//                 embedded
+//                 arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+//             >
+//                 <a-nft
+//                     type="nft"
+//                     url="https://rebeccazeidenberg.github.io/private-repo/starrynight"
+//                     smooth="true"
+//                     smoothCount="10"
+//                     smoothTolerance=".01"
+//                     smoothThreshold="5"
+//                 >
+//                     <a-entity>
+//                     <div class="sketchfab-embed-wrapper">
+//                         <iframe title="Vincent Van Gogh - Painterly Character Bust"
+//                         frameborder="0"
+//                         allowfullscreen mozallowfullscreen="true"
+//                         webkitallowfullscreen="true"
+//                         allow="fullscreen; autoplay; vr"
+//                         xr-spatial-tracking
+//                         execution-while-out-of-viewport
+//                         execution-while-not-rendered
+//                         web-share src="https://sketchfab.com/models/f8fe0ee97088403ba4c808141f27c706/embed">
+//                         </iframe>
+//                             <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+//                                 <a href="https://sketchfab.com/3d-models/vincent-van-gogh-painterly-character-bust-f8fe0ee97088403ba4c808141f27c706?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706"
+//                                 target="_blank"
+//                                 style="font-weight: bold; color: #1CAAD9;">
+//                                 Vincent Van Gogh - Painterly Character Bust
+//                                 </a> by
+//                                 <a href="https://sketchfab.com/chocofries?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706"
+//                                 target="_blank"
+//                                 style="font-weight: bold; color: #1CAAD9;">
+//                                 ChocoFries </a> on
+//                                 <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706"
+//                                 target="_blank"
+//                                 style="font-weight: bold; color: #1CAAD9;">
+//                                 Sketchfab</a>
+//                             </p>
+//                         </div>
+//                     </a-entity>
+//                 </a-nft>
+
+//                 <a-entity camera></a-entity>
+//             </a-scene>
+//         </div>
+//     )
+// }
 
 export default AR;
