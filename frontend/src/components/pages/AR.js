@@ -5,8 +5,18 @@ import React, { Component } from "react";
 class AR extends Component {
   render() {
     return (
-      <a-scene >
-        <a-entity 
+      <a-scene vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+        <a-nft
+      markerhandler
+      type="nft"
+      url="https://maksvet.github.io/ar-test/nft/trex"
+    >
+    </a-nft>
+    <a-entity camera></a-entity>
+        {/* <a-entity 
           geometry="primitive: box" 
           position="-1 0.5 -3" 
           rotation="0 45 0" 
@@ -23,7 +33,7 @@ class AR extends Component {
           geometry="primitive: plane; width: 4; height: 4" 
           position="0 0 -4" 
           rotation="-90 0 0" 
-          material="color: #7BC8A4" />
+          material="color: #7BC8A4" /> */}
       </a-scene>
     );
   }
