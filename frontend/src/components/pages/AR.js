@@ -14,6 +14,12 @@ class AR extends Component {
       type="nft"
       url="https://maksvet.github.io/ar-test/nft/trex"
     >
+        <a-entity
+            gltf-model="https://ar-js-org.github.io/AR.js/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            scale="5 5 5"
+            position="50 150 0"
+        >
+        </a-entity>
     </a-nft>
     <a-entity camera></a-entity>
         {/* <a-entity 
