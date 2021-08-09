@@ -11,11 +11,27 @@ class AR extends React.Component {
             embedded
             arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
           >
-        
             <a-nft
               markerhandler
+              name = "blue-paint"
               type="nft"
-              url="https://maksvet.github.io/ar-test/nft/trex"
+              url="NFTs/blue-painting"
+            >
+            </a-nft>
+
+            <a-nft
+              markerhandler
+              name = "trex"
+              type="nft"
+              url="NFTs/trex-image-big"
+            >
+            </a-nft>
+            
+            <a-nft
+              markerhandler
+              name="disc"
+              type="nft"
+              url="NFTs/download"
             >
             </a-nft>
             <a-entity camera></a-entity>
