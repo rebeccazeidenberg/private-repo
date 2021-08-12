@@ -6,10 +6,12 @@ import IconMap from './../../img/icon-map.png';
 import IconGalleries from './../../img/icon-galleries.png';
 import IconSearch from './../../img/icon-search.png';
 import Gallery3rdilab from './../../img/gallery-3rdilab.png';
+import Options from './Options.js'
 
 const Museums = () => {
     return(
-        <div>
+        <div id="outer-container">
+			<Options pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } ></Options>
 			<div className="d-flex justify-content-between w-100">
 				<div className="d-inline-block">
 					<Link to="/map">
@@ -17,11 +19,6 @@ const Museums = () => {
 					</Link>
 					<Link to="/museums">
 						<img src={IconGalleries} className="mt-4 shadow-sm img-fluid" alt="Icon Two" width={50} heigt={50} />
-					</Link>
-				</div>
-				<div className="d-inline-block">
-					<Link to="/options">
-						<img src={IconHamburger} className="mr-4 mt-4 shadow-sm img-fluid" alt="Hamburger" width={50} heigt={50} />
 					</Link>
 				</div>
 			</div>

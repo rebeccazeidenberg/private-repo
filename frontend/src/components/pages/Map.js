@@ -7,6 +7,7 @@ import IconMap from './../../img/icon-map.png';
 import IconGalleries from './../../img/icon-galleries.png';
 import IconSearch from './../../img/icon-search.png';
 
+
 const Map = () => {
     return(
         <GoogleMap
