@@ -1,11 +1,14 @@
+/*global google*/
 import React from 'react';
-import { Form } from 'react-bootstrap';
-import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
+import { Form, Button } from 'react-bootstrap';
+import { GoogleMap, Marker, withScriptjs, withGoogleMap, InfoWindow } from "react-google-maps";
 import { Link } from 'react-router-dom';
 import IconHamburger from './../../img/icon-hamburger.png';
 import IconMap from './../../img/icon-map.png';
 import IconGalleries from './../../img/icon-galleries.png';
 import IconSearch from './../../img/icon-search.png';
+import old2 from './../../img/old2.38 1@2x.png'
+
 
 
 const Map = () => {
@@ -13,9 +16,22 @@ const Map = () => {
         <GoogleMap
             defaultZoom={8}
             defaultCenter={{ lat: 45.0876, lng: -64.3662 }}
-        />
+        >
+                
+              <Marker 
+              position={{ lat: 45.0876, lng: -64.3662 }}
+              icon={{
+                url:old2,
+                scaledSize: new google.maps.Size(58, 49)
+              }}
+              > 
+              </Marker>
+
+        </GoogleMap>
     )
 }
+
+
 
 const WrappedMap = withScriptjs(withGoogleMap(Map))
 
@@ -33,7 +49,7 @@ const GoogleMaps = () => {
                 </div>
             </div>
             <div className="overlay-buttons-top-right">
-                <Link to="/options">
+                <Link to="">
                     <img src={IconHamburger} className="custom-m-t shadow-sm img-fluid" alt="Hamburger" width={40} heigt={40} />
                 </Link>
             </div>
@@ -45,7 +61,7 @@ const GoogleMaps = () => {
                 </Form.Group>
             </Form>
             <WrappedMap 
-                googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'}
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
                 loadingElement={<div style={{ height: "100%" }} />}
                 containerElement={<div style={{ height: "100%" }} />}
                 mapElement={<div style={{ height: "100%" }} />}

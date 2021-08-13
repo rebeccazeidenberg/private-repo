@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactFlagsSelect from 'react-flags-select';
 import { Link } from 'react-router-dom';
 import old2 from './../../img/old2.38 1@2x.png';
+import Options from './Options.js'
 
 const Languages = () => {
     const [selected, setSelected] = useState("");
@@ -31,9 +32,11 @@ const Languages = () => {
   });
 
   return (
-    <div className="demo-wrapper"><Link to="/map">
+    <div className="demo-wrapper" id="outer-container">
+      <Options pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } ></Options>
+      <Link to="/museums">
     <img src={old2} className="ml-4 mt-3 mb-4 shadow-sm img-fluid" alt="Logo" width={150} height={50}  />
-</Link>
+      </Link>
       <ReactFlagsSelect
         selected={selected}
         onSelect={onSelect}

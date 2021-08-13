@@ -29,7 +29,7 @@ const Options = () => {
             <Link to="/map" style={{ color: '#FFF' }} >Map</Link>
         </a>
         <a className="menu-item" style={{ color: '#FFF' }}>
-          <RiLogoutBoxRLine/> Logout
+            <Link to="/login" style={{ color: '#FFF' }} ><RiLogoutBoxRLine/> Logout</Link>
         </a>
       </Menu>
     )
