@@ -72,6 +72,14 @@
     z-index: 5;
 }
 
+.overlay-search-spot {
+    position: absolute;
+    left: 450px;
+    top: 300px;
+    z-index: 7;
+    opacity: 0.01;
+}
+
 .overlay-search-box {
     position: absolute;
     left: 0px;

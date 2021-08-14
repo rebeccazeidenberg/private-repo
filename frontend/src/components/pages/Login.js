@@ -8,14 +8,16 @@ import {
   } from "react-social-login-buttons";
 import {Button} from 'react-bootstrap';
 import { BsEnvelope } from "react-icons/bs";
-
-
+import old2 from './../../img/old2.38 1@2x.png';
 
 
 const Login = () => {
     return(
         <div
         >
+            <div className="text-center">
+                <img src={old2} className="ml-6 mt-3 mb-5 shadow-sm img-fluid" alt="Logo" width={150} height={50}  />
+            </div>
            <Form className="login-form"> 
                 <FacebookLoginButton className="mt-3 mb-3" onClick={() => alert("This Will Allow Login With Facebook")}/>
                 <GoogleLoginButton className="mt-3 mb-3" onClick={() => alert("This Will Allow Login with Google")}/>
@@ -26,9 +28,9 @@ const Login = () => {
                     <BsEnvelope /> Log in with Email
                 </Button>
             </div>
-            <div className="text-center">
+            <div className="text-center" style={{ paddingTop: "40px" }}>
                 {/* <a href="">Register</a> */}
-                <Link to="/museums">Register</Link>
+                <Link to="/museums" style={{color: "black"}} >Register</Link>
                 
             </div>
             </Form>

@@ -16,17 +16,17 @@ const Map = () => {
         <GoogleMap
             defaultZoom={8}
             defaultCenter={{ lat: 45.0876, lng: -64.3662 }}
+            defaultOptions={{mapTypeControl: false}}
         >
                 
               <Marker 
               position={{ lat: 45.0876, lng: -64.3662 }}
               icon={{
                 url:old2,
-                scaledSize: new google.maps.Size(58, 49)
+                scaledSize: new google.maps.Size(40, 25)
               }}
-              > 
+              >
               </Marker>
-
         </GoogleMap>
     )
 }
@@ -54,6 +54,8 @@ const GoogleMaps = () => {
                 </Link>
             </div>
             <p className="overlay-search-name mt-3 ml-4 mb-0 text-white">SEARCH</p>
+            <p className="overlay-search-spot mt-9 ml-4 mb-0 text-white"><Link to="/arvr">-------------------------------------</Link></p>
+
             <Form className="overlay-search-box">
                 <Form.Group className="d-flex justify-content-between custom-vw-1" controlId="formBasicSearch">
                     <Form.Control className="ml-4 mr-4 search-map border-white border-top-0 border-right-0 border-left-0 bg-transparent" type="search" />
@@ -65,6 +67,7 @@ const GoogleMaps = () => {
                 loadingElement={<div style={{ height: "100%" }} />}
                 containerElement={<div style={{ height: "100%" }} />}
                 mapElement={<div style={{ height: "100%" }} />}
+            
             />
         </div>
     )
