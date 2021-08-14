@@ -1,10 +1,12 @@
 import React from 'react';
-
+import VModal from './VModal';
 
 class AR extends React.Component {
     render() {
         return (
-
+         
+        <>
+          <VModal></VModal>
           <a-scene
             vr-mode-ui="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
@@ -36,6 +38,7 @@ class AR extends React.Component {
             </a-nft>
             <a-entity camera></a-entity>
           </a-scene>
+        </>
         );
     }
 }

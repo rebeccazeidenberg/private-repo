@@ -18,7 +18,7 @@
 			var marker = this.el;
 
 			marker.addEventListener('markerFound', function() {
-				alert(marker.getAttribute('name'));
+				document.getElementsByClassName("modal")[0].style.display="block"
 			});
 		}
 	});
