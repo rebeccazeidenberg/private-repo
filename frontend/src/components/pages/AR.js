@@ -1,7 +1,7 @@
 import React from 'react';
 // import VModal from './VModal';
-import Modal from './Modal';
-import VModal from './VModal';
+//import Modal from './Modal';
+//import VModal from './VModal';
 
 class AR extends React.Component {
     render() {

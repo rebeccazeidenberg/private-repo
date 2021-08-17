@@ -55,7 +55,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <p>now</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" id="modalClose" data-dismiss="modal">Close</button>
@@ -68,12 +68,11 @@
       AFRAME.registerComponent('markerhandler', {
         init: function () {
           var marker = this.el;
-          console.log(marker)
+          
 
           marker.addEventListener('markerFound', function() {
             document.getElementsByClassName("modal")[0].style.display="block"
-            // console.log("listening??????")
-            // window.showModal=true
+            
           });
         }
       });
