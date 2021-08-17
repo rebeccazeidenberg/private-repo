@@ -1,10 +1,10 @@
 import React from 'react';
 import {Modal} from 'react-bootstrap';
 
-const ARModal = () => {
+const ARModal = (props) => {
     return (
         <div className="AR-modal">
-            <Modal className="Test" show={true}>
+            <Modal className="Test" show={props.showModal}>
                 <Modal.Header>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
