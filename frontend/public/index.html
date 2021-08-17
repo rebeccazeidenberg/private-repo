@@ -71,7 +71,8 @@
           
 
           marker.addEventListener('markerFound', function() {
-            document.getElementsByClassName("modal")[0].style.display="block"
+            const modal = marker.getAttribute('name')
+            document.getElementsByClassName(modal)[0].style.display="block"
             
           });
         }
