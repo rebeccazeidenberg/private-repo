@@ -15,10 +15,10 @@ const Museums = () => {
 			<div className="d-flex justify-content-between w-100">
 				<div className="d-inline-block">
 					<Link to="/map">
-						<img src={IconMap} className="ml-4 mt-4 shadow-sm img-fluid" alt="Icon One" width={50} heigt={50} />
+						<img src={IconMap} className="ml-4 mt-3 shadow-sm img-fluid" alt="Icon One" width={50} heigt={50} />
 					</Link>
 					<Link to="/museums">
-						<img src={IconGalleries} className="mt-4 shadow-sm img-fluid" alt="Icon Two" width={50} heigt={50} />
+						<img src={IconGalleries} className="mt-3 shadow-sm img-fluid" alt="Icon Two" width={50} heigt={50} />
 					</Link>
 				</div>
 			</div>
@@ -26,7 +26,7 @@ const Museums = () => {
             <Form>
 				<Form.Group className="mb-3 d-flex align-items-end justify-content-between w-100" controlId="formBasicSearch">
 					<Form.Control className="ml-4 mr-4 search border-dark border-top-0 border-right-0 border-left-0" type="search" />
-					<img src={IconSearch} className="mr-4 shadow-sm img-fluid" alt="Icon Three" width={50} heigt={50} />
+					<img src={IconSearch} className="mr-3 shadow-sm img-fluid" alt="Icon Three" width={50} heigt={50} />
 				</Form.Group>
 			</Form>
 			<div className="">
