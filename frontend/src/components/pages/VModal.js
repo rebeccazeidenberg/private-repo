@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
+// import ReactDOM from 'react-dom'
+
+import ReactAudioPlayer from 'react-audio-player';
 
 
-const VModal= () => {
+
+const VModal= (props) => {
     
     const closeModal = () => {
             document.getElementsByClassName("modal")[0].style.display="none"
@@ -19,7 +23,12 @@ const VModal= () => {
                             </button>
                         </div>
                         <div className="modal-body">
-                            <p>Modal body text goes here.</p>
+                            <p>Modal body text goes here. {props.name}</p>
+                                <ReactAudioPlayer
+                                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                                // autoPlay
+                                controls controlsList="nodownload"
+                                />
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal" variant="primary" onClick={closeModal}>Close</button>
