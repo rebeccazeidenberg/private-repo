@@ -1,32 +1,37 @@
 /*global google*/
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { GoogleMap, Marker, withScriptjs, withGoogleMap, InfoWindow } from "react-google-maps";
+import { GoogleMap, Marker, withScriptjs, withGoogleMap } from "react-google-maps";
 import { Link } from 'react-router-dom';
 import IconHamburger from './../../img/icon-hamburger.png';
 import IconMap from './../../img/icon-map.png';
 import IconGalleries from './../../img/icon-galleries.png';
 import IconSearch from './../../img/icon-search.png';
-import old2 from './../../img/old2.38 1@2x.png'
+import Square from './../../img/search-3-32.jpg';
+import MarkerComponent from "./MarkerComponent";
+import Options from './Options.js'
 
 
 
 const Map = () => {
     return(
+        
         <GoogleMap
             defaultZoom={8}
-            defaultCenter={{ lat: 45.0876, lng: -64.3662 }}
-            defaultOptions={{mapTypeControl: false}}
+            defaultCenter={{ lat: 43.6532, lng: -79.3832 }}
+            defaultOptions={{mapTypeControl: false,
+                fullscreenControl: false,
+            }}
         >
                 
+              <MarkerComponent/>
+              
               <Marker 
-              position={{ lat: 45.0876, lng: -64.3662 }}
+              position={{ lat: 43.6532, lng: -79.3832 }}
               icon={{
-                url:old2,
-                scaledSize: new google.maps.Size(40, 25)
+                scaledSize: (30, 25)
               }}
-              >
-              </Marker>
+              />
         </GoogleMap>
     )
 }
@@ -37,7 +42,11 @@ const WrappedMap = withScriptjs(withGoogleMap(Map))
 
 const GoogleMaps = () => {
     return(
-        <div style={{width: '100vw', height: '100vh'}}>    
+        <div style={{width: '100vw', height: '100vh'}} className="demo-wrapper" id="outer-container"> 
+           <Options pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }></Options>
+           <div className="overlay-buttons-top-right">
+           <div> <img src={Square} className="white-box"/></div>
+           </div>
             <div className="overlay-buttons-top-left">
                 <div className="d-inline-block">
                     <Link to="/map">
@@ -48,14 +57,7 @@ const GoogleMaps = () => {
                     </Link>
                 </div>
             </div>
-            <div className="overlay-buttons-top-right">
-                <Link to="">
-                    <img src={IconHamburger} className="custom-m-t shadow-sm img-fluid" alt="Hamburger" width={40} heigt={40} />
-                </Link>
-            </div>
             <p className="overlay-search-name mt-3 ml-4 mb-0 text-white">SEARCH</p>
-            <p className="overlay-search-spot mt-9 ml-4 mb-0 text-white"><Link to="/arvr">-------------------------------------</Link></p>
-
             <Form className="overlay-search-box">
                 <Form.Group className="d-flex justify-content-between custom-vw-1" controlId="formBasicSearch">
                     <Form.Control className="ml-4 mr-4 search-map border-white border-top-0 border-right-0 border-left-0 bg-transparent" type="search" />

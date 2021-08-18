@@ -72,14 +72,6 @@
     z-index: 5;
 }
 
-.overlay-search-spot {
-    position: absolute;
-    left: 450px;
-    top: 300px;
-    z-index: 7;
-    opacity: 0.01;
-}
-
 .overlay-search-box {
     position: absolute;
     left: 0px;
@@ -92,7 +84,7 @@
 }
 
 .custom-m-t {
-    margin-top: 10px !important;
+    margin-top: 12px !important;
 }
 
 .custom-m-r {
@@ -125,11 +117,10 @@
 .bm-burger-button {
     position: fixed;
     width: 20px;
-    height: 20px;
-    left: 93vw;
-    top: 36px;
+    height: 15px;
+    right: 23px;
+    top: 39px;
     margin-top: -13px;
-    
   }
   
   .bm-burger-bars {
@@ -192,3 +183,10 @@
     color: #ffffff;
   }
   
+  .white-box {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 13px;
+    top: 14px;
+  }
