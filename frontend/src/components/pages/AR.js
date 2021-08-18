@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 import VModal from './VModal';
 
 
@@ -10,8 +13,7 @@ class AR extends React.Component {
         return (
          
         <>
-          <VModal name = "test"></VModal>
-
+          <VModal></VModal>
           <a-scene
             vr-mode-ui="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"

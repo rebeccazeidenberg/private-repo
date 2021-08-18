@@ -50,18 +50,12 @@
       AFRAME.registerComponent('markerhandler', {
         init: function () {
           var marker = this.el;
-          const marker_name = marker.getAttribute('name')
-          // <Vmodal name = marker_name/>
 
           marker.addEventListener('markerFound', function() {
-            const modal = document.getElementsByClassName("modal")[0]
-            modal.setAttribute("name", "test")
-            modal.style.display="block"
-            // document.getElementsByClassName("modal")[0].style.display="block"
+            document.getElementsByClassName("modal")[0].style.display="block"
           });
         }
       });
-      
     </script>
   </body>
 </html>
