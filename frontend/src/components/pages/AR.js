@@ -1,14 +1,17 @@
 import React from 'react';
-// import VModal from './VModal';
-//import Modal from './Modal';
-//import VModal from './VModal';
+
+import VModal from './VModal';
+
 
 class AR extends React.Component {
+  
     render() {
+      
         return (
          
         <>
-          {/* <VModal></VModal> */}
+          <VModal name = "test"></VModal>
+
           <a-scene
             vr-mode-ui="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
