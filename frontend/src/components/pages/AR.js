@@ -1,6 +1,4 @@
 import React from 'react';
-// import VModal from './VModal';
-import Modal from './Modal';
 import VModal from './VModal';
 
 class AR extends React.Component {
@@ -8,7 +6,7 @@ class AR extends React.Component {
         return (
          
         <>
-          {/* <VModal></VModal> */}
+          <VModal></VModal>
           <a-scene
             vr-mode-ui="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"

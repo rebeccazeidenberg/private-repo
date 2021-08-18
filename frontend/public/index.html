@@ -45,47 +45,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div class="modal" id="HTMLModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" id="X" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="modalClose" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script>
       AFRAME.registerComponent('markerhandler', {
         init: function () {
           var marker = this.el;
-          console.log(marker)
 
           marker.addEventListener('markerFound', function() {
             document.getElementsByClassName("modal")[0].style.display="block"
-            // console.log("listening??????")
-            // window.showModal=true
           });
         }
       });
-      const close= document.getElementById("modalClose")
-      close.addEventListener("click", function() {
-        document.getElementsByClassName("modal")[0].style.display="none"
-      })
-
-      const closeX= document.getElementById("X")
-      closeX.addEventListener("click", function() {
-        document.getElementsByClassName("modal")[0].style.display="none"
-      })
     </script>
   </body>
 </html>
