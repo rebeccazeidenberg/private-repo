@@ -1,64 +1,107 @@
 import React from 'react';
-import 'aframe';
-import {Box, Sphere, Cylinder, Plane, Sky, Text, Scene} from 'react-aframe-ar';
+import VModal from './VModal';
 
-const AR = () => {
-    return(
-        <div>
-            <div class="arjs-loader">
-                <div>Loading, please wait...</div>
-            </div>
-            <a-scene
-                vr-mode-ui="enabled: false;"
-                renderer="logarithmicDepthBuffer: true;"
-                embedded
-                arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+
+class AR extends React.Component {
+  
+    render() {
+      
+        return (
+         
+        <>
+          <VModal></VModal>
+          <a-scene
+            vr-mode-ui="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            embedded
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+          >
+            <a-nft
+              markerhandler
+              name = "blue-paint"
+              type="nft"
+              url="NFTs/blue-painting"
             >
-                <a-nft
-                    type="nft"
-                    url="https://rebeccazeidenberg.github.io/private-repo/starrynight"
-                    smooth="true"
-                    smoothCount="10"
-                    smoothTolerance=".01"
-                    smoothThreshold="5"
-                >
-                    <a-entity>
-                    <div class="sketchfab-embed-wrapper"> 
-                        <iframe title="Vincent Van Gogh - Painterly Character Bust" 
-                        frameborder="0" 
-                        allowfullscreen mozallowfullscreen="true" 
-                        webkitallowfullscreen="true" 
-                        allow="fullscreen; autoplay; vr" 
-                        xr-spatial-tracking 
-                        execution-while-out-of-viewport 
-                        execution-while-not-rendered 
-                        web-share src="https://sketchfab.com/models/f8fe0ee97088403ba4c808141f27c706/embed"> 
-                        </iframe> 
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> 
-                                <a href="https://sketchfab.com/3d-models/vincent-van-gogh-painterly-character-bust-f8fe0ee97088403ba4c808141f27c706?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706" 
-                                target="_blank" 
-                                style="font-weight: bold; color: #1CAAD9;"> 
-                                Vincent Van Gogh - Painterly Character Bust 
-                                </a> by 
-                                <a href="https://sketchfab.com/chocofries?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706" 
-                                target="_blank" 
-                                style="font-weight: bold; color: #1CAAD9;"> 
-                                ChocoFries </a> on 
-                                <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=f8fe0ee97088403ba4c808141f27c706" 
-                                target="_blank" 
-                                style="font-weight: bold; color: #1CAAD9;">
-                                Sketchfab</a>
-                            </p>
-                        </div>
-                    </a-entity>
-                </a-nft>
+            </a-nft>
 
+            <a-nft
+              markerhandler
+              name = "modal"
+              type="nft"
+              url="NFTs/krishna"
+            >
+            </a-nft>
+            
+            <a-nft
+              markerhandler
+              name="disc"
+              type="nft"
+              url="NFTs/download"
+            >
+            </a-nft>
 
+            <a-nft
+              markerhandler
+              name = "arc"
+              type="nft"
+              url="NFTs/arc"
+            >
+            </a-nft>
 
-                <a-entity camera></a-entity>
-            </a-scene>
-        </div>
-    )
+            <a-nft
+              markerhandler
+              name = "ganesha"
+              type="nft"
+              url="NFTs/ganesha"
+            >
+            </a-nft>
+
+            <a-nft
+              markerhandler
+              name = "krishna"
+              type="nft"
+              url="NFTs/krishna"
+            >
+            </a-nft>
+
+            <a-nft
+              markerhandler
+              name = "musical_allegory"
+              type="nft"
+              url="NFTs/musical_allegory"
+            >
+            </a-nft>
+
+            <a-nft
+              markerhandler
+              name = "pharaoh"
+              type="nft"
+              url="NFTs/pharaoh"
+            >
+            </a-nft>
+
+            <a-nft
+              markerhandler
+              name = "shark"
+              type="nft"
+              url="NFTs/shark"
+            >
+            </a-nft>
+
+            <a-nft
+              markerhandler
+              name = "starry_night"
+              type="nft"
+              url="NFTs/starry_night"
+            >
+            </a-nft>
+
+            
+            <a-entity camera></a-entity>
+          </a-scene>
+        </>
+        );
+    }
 }
 
 export default AR;
